@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+	<package name="login" extends="struts-default">
+	
+	<!-- 定义一个拦截器 -->
+		<interceptors>
+			<interceptor name="authority" class="org.interceptot.LoginInterceptor">
+			</interceptor>
+
+			<!-- 拦截器栈 -->
+			<interceptor-stack name="mydefault">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="authority" />
+			</interceptor-stack>
+		</interceptors>
+
+
+
+		<!-- 定义全局Result -->
+		<global-results>
+			<!-- 当返回login视图名时，转入/login.jsp页面 -->
+			<result name="login">login.jsp</result>
+		</global-results>
+	
+	<action name="doPaper" class="com.housework.action.sDoPaper" method="sdoPaper">
+	<result name="s" type="redirect"> 
+	<param name="location">paperAsw.jsp</param>
+	<param name="id">${id}</param>
+ </result> 
+	<interceptor-ref name="mydefault" />
+	</action>
+
+
+
+
+		<action name="register" class="com.housework.action.loginAndR"
+			method="register">
+			<result name="s">index.jsp</result>
+		</action>
+		<action name="toLogin">
+			<result>login.jsp</result>
+		</action>
+		<action name="login" class="com.housework.action.loginAndR"
+			method="login">
+			<result name="s">index.jsp</result>
+		</action>
+
+		<action name="tsearchPbm" class="com.housework.action.tpbmStore"
+			method="tsearchPbm">
+			<result name="s">t_pbmStore.jsp</result>
+		</action>
+		<action name="ssearchPbm" class="com.housework.action.tpbmStore"
+			method="ssearchPbm">
+			<result name="s">s_pbmStore.jsp</result>
+		</action>
+
+		<action name="toPaper" class="com.housework.action.tpbmStore"
+			method="toPaper">
+			<result name="s">t_pbmStore.jsp</result>
+		</action>
+		<action name="paperName" class="com.housework.action.tpbmStore"
+			method="paperName">
+			<result name="s">t_pbmStore.jsp</result>
+		</action>
+
+		<action name="add" class="com.housework.action.tpbmStore"
+			method="add">
+			<result name="show">t_pbmStore.jsp</result>
+		</action>
+		<action name="delete" class="com.housework.action.tpbmStore"
+			method="delete">
+			<result name="show">t_pbmStore.jsp</result>
+
+
+
+		</action>
+		<action name="prcsPaper" class="com.housework.action.paperAsw"
+			method="prcsPaper">
+			<result name="show">paperStore.jsp</result>
+		</action>
+		<action name="qCode" class="com.housework.action.paperAsw"
+			method="qCode">
+			<result name="show">paperStore.jsp</result>
+		</action>
+		<action name="getpaperListByname" class="com.housework.action.getpaperList"
+			method="getpaperListByName">
+			<result name="paperstore">paperStore.jsp</result>
+		</action>
+
+
+	</package>
+
+
+</struts>

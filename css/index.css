@@ -1,0 +1,75 @@
+/* 娑撹桨绨＄拋锕奺濞村繗顬囬崳銊ョ湷娑擃厽妯夌粈鍝勫敶鐎癸拷*/
+body {
+	text-align: center;
+	background: url(../images/header_bg.jpg) repeat-x 0 0;
+}
+.main {
+	text-align: left;
+	width: 958px;
+	margin: 0 auto;
+}
+/* 婢舵挳鍎撮弽宄扮础 */
+.header {
+	height: 87px;
+	background: url(../images/header.jpg) no-repeat;
+	position: relative;
+}
+.help {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	color: #fff;
+}
+.help a {
+	color: #fff;
+	text-decoration: none;
+}
+.help a:hover {
+	text-decoration: underline;
+}
+/* 鐎佃壈鍩呴弶鈩冪壉瀵拷*/
+.topbar {
+	height: 42px;
+	line-height: 42px;
+	color: #777;
+	font-size: 14px;
+	font-weight: bold;
+}
+.topbar ul li {
+	display: inline;
+	padding: 12px 20px;
+}
+.topbar ul li a:hover {
+	color: #0154a4;
+	text-decoration: none;
+}	
+/* 闁氨鐓℃穱鈩冧紖閺嶅嘲绱�*/
+.notice {
+	height: 23px;
+	line-height: 23px;
+	background: url(../images/notice.jpg) repeat-x;
+}
+.main_visual {
+	margin-top: 10px;
+}
+.left_m {
+	align:center;
+	position:absolute;
+	width: 800px;
+	border: 1px solid #aaa;
+	bottom:20px;
+	left:265px;
+	height:475px;
+	top:145px;
+}
+.content_s{
+	position:absolute;
+	border:1px solid #aaa;
+	top:10px;
+	left:10px;
+}
+.new_add{
+	position:absolute;
+	right:160px;
+	top:10px;
+}
